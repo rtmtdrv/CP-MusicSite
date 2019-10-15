@@ -126,19 +126,103 @@ header {
     display: grid;
     grid-template-columns: 2fr 2fr;
     grid-gap: 50px;
-    
+
     .video {
       border-radius: 4px;
       overflow: hidden;
       -webkit-box-shadow: 0px 13px 24px -8px rgba(0, 0, 0, 0.75);
       -moz-box-shadow: 0px 13px 24px -8px rgba(0, 0, 0, 0.75);
       box-shadow: 0px 13px 24px -8px rgba(0, 0, 0, 0.75);
-      
+
       iframe {
         height: 300px;
         margin-bottom: -3px;
-
       }
+    }
+  }
+}
+
+#music {
+  padding: 80px 0;
+  position: relative;
+
+  .blurredbg {
+    background-image: linear-gradient(
+        45deg,
+        rgba(255, 253, 60, 1) 0%,
+        rgba(255, 253, 60, 1) 33%,
+        rgba(255, 253, 60, 0.83) 36%,
+        rgba(255, 253, 60, 0.6) 43%,
+        rgba(255, 253, 60, 0.20) 62%,
+        rgba(176, 38, 183, 0) 100%
+      ),
+      url("/img/album69.jpg");
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    position: absolute;
+    filter: blur(40px) saturate(130%);
+  }
+
+  .container {
+    display: flex;
+    padding: 0 50px;
+    position: relative;
+    z-index: 3;
+  }
+
+  .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+      font-size: 3rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .sub-title {
+      font-size: 1.7rem;
+      text-align: center;
+      font-weight: 500;
+      text-transform: uppercase;
+      margin-bottom: 100px;
+    }
+
+    .singles {
+      width: 400px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 80px;
+
+      li {
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+    }
+
+    .logos {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+    }
+  }
+
+  .album-cover {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 50%;
     }
   }
 }
