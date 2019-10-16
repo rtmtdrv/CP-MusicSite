@@ -19,6 +19,10 @@ header {
   justify-content: space-between;
   .logo {
     width: 50px;
+    &:hover {
+      opacity: 0.75;
+      transition: all 0.2s ease-in-out;
+    }
     img {
       width: 100%;
     }
@@ -31,6 +35,10 @@ header {
       font-size: 1.2rem;
       font-weight: 300;
       padding: 0 10px;
+      &:hover {
+        opacity: 0.75;
+        transition: all 0.2s ease-in-out;
+      }
     }
   }
 }
@@ -153,7 +161,7 @@ header {
         rgba(255, 253, 60, 1) 33%,
         rgba(255, 253, 60, 0.83) 36%,
         rgba(255, 253, 60, 0.6) 43%,
-        rgba(255, 253, 60, 0.20) 62%,
+        rgba(255, 253, 60, 0.2) 62%,
         rgba(176, 38, 183, 0) 100%
       ),
       url("/img/album69.jpg");
@@ -222,7 +230,87 @@ header {
     align-items: center;
 
     img {
-      width: 50%;
+      width: 70%;
+      border-radius: 10px;
     }
+  }
+}
+
+#tour {
+  background: black;
+  position: relative;
+  z-index: 4;
+
+  .top-img {
+    background-image: url("/img/group.png");
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: saturate(0%) contrast(150%);
+  }
+
+  .tourdates {
+    background: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+
+    .title {
+      text-align: center;
+      color: white;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      margin: 0 0 80px;
+    }
+
+    .dates {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      // max-width: 800px;
+
+      li {
+        color: white;
+        font-size: 1.3rem;
+        padding: 0 20px;
+
+        span {
+          padding: 0 10px;
+        }
+
+        .city {
+          font-weight: 700;
+        }
+
+        .location {
+          font-weight: 300;
+          font-size: 1rem;
+        }
+
+        .date {
+          font-weight: 500;
+          color: #f14848;
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background: #1b1b1b;
+  position: relative;
+  z-index: 4;
+  padding: 25px;
+  text-align: center;
+  color: white;
+  img {
+    max-width: 45px;
+    margin-bottom: 10px;
+  }
+  a {
+    color: red;
+    text-decoration: none;
   }
 }
